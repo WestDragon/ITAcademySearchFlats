@@ -191,7 +191,7 @@ components:
         text:
           type: string
           description: "Описание действия пользователя"
-          example: "Создана запись в журнале питания"
+          example: "Пользователь вошел в систему"
         type:
           $ref: '#/components/schemas/EssenceType'
         id:
