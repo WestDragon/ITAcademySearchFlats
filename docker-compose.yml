@@ -22,7 +22,7 @@ services:
       - flats_ntwrk
   swagger-ui:
     build: swagger-ui
-    image: flats_swagger-ui:1.0.1
+    image: flats_swagger-ui:1.0.2
     ports:
       - "81:8080"
     networks:
