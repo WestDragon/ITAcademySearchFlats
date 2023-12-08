@@ -163,7 +163,7 @@ components:
         application/json:
           schema:
             oneOf:
-              - $ref: '#/components/schemas/ReportParamAudit'
+              - $ref: '#/components/schemas/UserActionAuditParam'
 
   responses:
     Bad_Request:
@@ -233,7 +233,7 @@ components:
           example: "Журнал аудита за: 01.01.2021 - 01.01.2022"
         params:
           oneOf:
-            - $ref: '#/components/schemas/ReportParamAudit'
+            - $ref: '#/components/schemas/UserActionAuditParam'
 
     ReportType:
       type: string
@@ -243,22 +243,26 @@ components:
       enum:
         - JOURNAL_AUDIT
 
-    ReportParamAudit:
+    UserActionAuditParam:
       type: object
-      description: Параметры запуска отчёта о питании
+      description: Параметры запуска отчёта о действиях пользователя
       properties:
         user:
-          description: Записи относящиеся к пользователю
-          type: string
-          format: uuid
+          description: Действия выполненные пользователями
+          type: array
+          items:
+            type: string
+            format: uuid
         from:
           description: Записи из журнала начиная с даты
           type: string
           format: date
+          example: "01.01.2021"
         to:
           description: Записи из журнала заканчивая датой
           type: string
           format: date
+          example: "01.01.2022"
 
 
     PageOfReport:
