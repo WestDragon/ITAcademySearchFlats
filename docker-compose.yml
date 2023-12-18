@@ -27,6 +27,13 @@ services:
       - "81:8080"
     networks:
       - flats_ntwrk
+  user-service:
+    build: user-service
+    image: flats_user-service:1.0.0
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - flats_ntwrk
 
   proxy:
     build: proxy
