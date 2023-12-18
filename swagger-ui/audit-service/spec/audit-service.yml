@@ -170,8 +170,10 @@ components:
       description: |
         Тип сущности:
           * `USER` - Пользователь
+          * `REPORT` - Отчёт
       enum:
         - "USER"
+        - "REPORT"
     Audit:
       type: object
       description: Информация о действии в системе
@@ -188,15 +190,18 @@ components:
           readOnly: true
         user:
           $ref: '#/components/schemas/User'
+          description: "Пользователь совершивший действие"
         text:
           type: string
           description: "Описание действия пользователя"
           example: "Пользователь вошел в систему"
         type:
           $ref: '#/components/schemas/EssenceType'
+          description: "Над какой сущностью совершали действие"
+          example: "REPORT"
         id:
           type: string
-          description: "Идентификатор сущности указанного типа"
+          description: "Идентификатор сущности указанного типа над которой совершали действие"
 
     PageOfAudit:
       type: object
