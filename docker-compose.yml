@@ -42,7 +42,7 @@ services:
 
   proxy:
     build: proxy
-    image: flats_proxy:1.0.0
+    image: flats_proxy:1.0.1
     ports:
       - "80:80"
     networks:
