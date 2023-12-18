@@ -34,6 +34,11 @@ services:
       SPRING_PROFILES_ACTIVE: docker
     networks:
       - flats_ntwrk
+  audit-service:
+    build: audit-service
+    image: flats_audit-service:1.0.0
+    networks:
+      - flats_ntwrk
 
   proxy:
     build: proxy
