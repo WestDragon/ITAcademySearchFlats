@@ -46,11 +46,11 @@ public class SecurityConfig {
         // Set permissions on endpoints
         http.authorizeHttpRequests(requests -> requests
                 // Our public endpoints
-                .requestMatchers( "/public/**").permitAll()
+                .requestMatchers( "/users/public/**").permitAll()
                 //Следующие два пример делают одно и тоже
-                .requestMatchers("/user/test").hasAnyRole("ADMIN") //Обрати внимание что тут нет префикса ROLE_
-                .requestMatchers("/user/test").hasAnyAuthority("ROLE_ADMIN") //А тут есть
-                .requestMatchers(HttpMethod.GET,"/user/details").authenticated()
+                .requestMatchers("/users/user/test").hasAnyRole("ADMIN") //Обрати внимание что тут нет префикса ROLE_
+                .requestMatchers("/users/user/test").hasAnyAuthority("ROLE_ADMIN") //А тут есть
+                .requestMatchers(HttpMethod.GET,"/users/user/details").authenticated()
                 // Our private endpoints
                 .anyRequest().authenticated()
         );
