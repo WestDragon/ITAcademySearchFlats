@@ -29,7 +29,7 @@ services:
       - flats_ntwrk
   user-service:
     build: user-service
-    image: flats_user-service:1.0.1
+    image: flats_user-service:1.0.2
     environment:
       SPRING_PROFILES_ACTIVE: docker
     networks:
