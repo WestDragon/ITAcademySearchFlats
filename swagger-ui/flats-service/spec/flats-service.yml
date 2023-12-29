@@ -185,6 +185,10 @@ components:
           type: integer
           description: "Этаж"
           example: 3
+        bedrooms:
+          type: integer
+          description: "Количество комнат"
+          example: 6
         photo_urls:
           description: "Ссылки на фото объекта"
           type: array
