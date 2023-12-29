@@ -105,13 +105,13 @@ paths:
               schema:
                 type: string
                 format: binary
-                description: Файл
+                description: Файл Excel XLSX
           headers:
             Content-Disposition:
               schema:
                 type: string
                 description: Описание файла
-                example: 'attachment; filename="f43b1a97-dc00-40e2-9450-ace8d2416f3d"'
+                example: 'attachment; filename="f43b1a97-dc00-40e2-9450-ace8d2416f3d.xlsx"'
             Content-Type:
               schema:
                 type: string
