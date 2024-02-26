@@ -421,7 +421,7 @@ components:
 
     Subscribe:
       type: object
-      description: Недвижимость
+      description: Подписка
       allOf:
         - $ref: '#/components/schemas/t_base_essence'
       properties:
